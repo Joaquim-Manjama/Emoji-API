@@ -2,6 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import { getEmoji } from './AI.js';
 
+
 const PORT = process.env.PORT;
 
 const app = express();
@@ -18,3 +19,7 @@ app.get('/emoji', (req, res) => {
 
 
 })
+
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
