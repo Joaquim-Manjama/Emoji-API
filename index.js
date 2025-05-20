@@ -1,12 +1,13 @@
 import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 import { getEmoji } from './AI.js';
 
 
 const PORT = process.env.PORT;
 
 const app = express();
-
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.json("Welcome to Emoji AI");
